@@ -64,6 +64,11 @@ namespace MathTrivia
 				question = "What is " + number1 + " - " + number2 + " ?";
 				correct = number1 - number2;
 			}
+			if (type == 4)
+			{
+				question = "What is " + number1 + " * " + number2 + " ?";
+				correct = number1 * number2;
+			}
 			Console.WriteLine(question);
 
 			string answerInput = Console.ReadLine();
@@ -88,6 +93,7 @@ namespace MathTrivia
 				stringType = "Addition";
 			}
 			else if (type == 2) { stringType = "Subtraction"; }
+			else if (type == 4) { stringType = "Multipication"; }
 			else { stringType = "Mixed"; }
 			Score score = new Score(result, stringType, Player.Name, timeStamp);
 			listOfScores.Add(score);

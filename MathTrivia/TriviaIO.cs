@@ -36,13 +36,17 @@ namespace MathTrivia
 						logic.Play(userInput);
 						break;
 					case 4:
+						Console.WriteLine("Case 4: You have chosen multipication quiz!");
+						logic.Play(userInput);
+						break;
+					case 5:
 						Console.WriteLine("This is " + name + " scoreboard:");
 						logic.PrintPlayerScores();
 						break;
-					case 5:
+					case 6:
 						logic.PrintAllScores();
 						break;
-					case 6:
+					case 7:
 						Console.WriteLine("Bye, bye " + name);
 						Console.ReadKey();
 						logic.WriteFile();
@@ -51,7 +55,7 @@ namespace MathTrivia
 						Console.WriteLine("Please enter a correct choice");
 						break;
 				}
-			} while (userInput != 6);
+			} while (userInput != 7);
 		}
 
 		public int Menu()
@@ -59,9 +63,10 @@ namespace MathTrivia
 			Console.WriteLine("1. Addition");
 			Console.WriteLine("2. Subtraction");
 			Console.WriteLine("3. Mixed");
-			Console.WriteLine("4. Check your score");
-			Console.WriteLine("5. Check all scores");
-			Console.WriteLine("6. Exit");
+			Console.WriteLine("4. Multipication");
+			Console.WriteLine("5. Check your score");
+			Console.WriteLine("6. Check all scores");
+			Console.WriteLine("7. Exit");
 			var result = Console.ReadLine();
 			return Convert.ToInt32(result);
 		}
